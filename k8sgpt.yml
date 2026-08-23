@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx-pod
+  namespace: nginx-ns
+spec:
+  containers:
+    - name: nginx-pod-dep
+      image: nginx:1.f
+
