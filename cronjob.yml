@@ -29,9 +29,9 @@ spec:
 
             volumeMounts:
               - name: data-volume
-                mountPath: demo-data
+                mountPath: /demo-data
               - name: backup-volume
-                mountPath: backup
+                mountPath: /backup
           restartPolicy: OnFailure
           volumes:
               - name: data-volume
