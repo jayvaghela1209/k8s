@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata: 
+  name: note-app-deployment
+  namespace: nginx-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: note-app
+  
+  template:
+    metadata:
+      labels:
+        app: note-app
+    spec:
+      containers:
+      - name: note-app-con
+        image: jayvaghela0304/notespace:v1
+        ports:
+          - containerPort: 5000
